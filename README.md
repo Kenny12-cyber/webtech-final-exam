@@ -109,3 +109,42 @@ Pages Included:
 
 ⚙️ Dashboard (Admin) – Manage users, products, and view order summaries.
 
+
+
+
+✨ Key Features
+🔐 User Authentication
+
+Sign Up: New users can create an account by entering their name, email, and password.
+
+Sign In: Existing users can log in securely using their credentials.
+
+Role-Based Access: Separate access for regular users and administrators.
+
+🛍️ Product Management
+
+Product Listings: Browse all available products with real-time stock status.
+
+Product Details: View comprehensive information including name, price, description, and availability.
+
+Search & Filter: Search products by name or category to quickly find items of interest.
+
+🛒 Shopping Cart & Orders
+
+
+Add to Cart: Users can add desired products to their personal shopping cart.
+
+Cart Management: Update item quantities or remove products before placing an order.
+
+
+
+🛠️ Admin Dashboard
+
+User Management: View, edit, or delete registered users.
+
+Product Management: Add, update, or remove products in the store.
+
+Order Management: Monitor and manage customer orders effectively.
+
+
+
