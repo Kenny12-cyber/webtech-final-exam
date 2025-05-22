@@ -1,15 +1,17 @@
 🌐 LUX FASHION ONLINE SHOPPING APPLICATION
+
 📄 Project Overview
+
 Lux Fashion is a modern, user-friendly online shopping application built using Spring Boot and PostgreSQL. The platform is designed to deliver a seamless and secure shopping experience.
 Key features include:
 
-User authentication and role-based authorization
+1.User authentication and role-based authorization
 
-Product management and browsing
+2.Product management and browsing
 
-Shopping cart and order processing
+3.Shopping cart and order processing
 
-RESTful API integration
+4.RESTful API integration
 
 🛠️ Technologies Used
 🔙 Backend:
