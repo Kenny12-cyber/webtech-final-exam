@@ -183,4 +183,15 @@ Admin users have full control to manage the product catalog, oversee customer ac
 ![4](https://github.com/user-attachments/assets/1a8c1297-70c2-4ad9-90d2-6c5da57dc109)
 ![3](https://github.com/user-attachments/assets/5f16965b-2c92-4b3c-abe1-1bb2fe2ce733)
 ![2](https://github.com/user-attachments/assets/8306d51a-b22c-4a56-9b35-dd07d490d3c6)
+![1](https://github.com/user-attachments/assets/010750e4-d9e1-4a10-84bc-300f5220c4eb)
+![2](https://github.com/user-attachments/assets/065c52f0-7282-47cd-86c2-8ea6db7bc450)
+![1](https://github.com/user-attachments/assets/8a99f17d-03ea-44db-9e39-fb6106252af4)![1](https://github.com/user-attachments/assets/d053a330-8b21-41d4-8552-2f68a5ab629d)
+![4](https://github.com/user-attachments/assets/cb3f83e7-13cf-44b7-8dd3-0084905f76d1)
+![2](https://github.com/user-attachments/assets/85c1a8a2-df1c-44ac-bb22-99eb31d332f5)
+![1](https://github.com/user-attachments/assets/4a05fbde-2735-4bbe-839a-1deb23f23fdf)
+![remove item](https://github.com/user-attachments/assets/c594cc33-0491-4ef6-b1ae-4a1238a7dc3f)
+![pay5](https://github.com/user-attachments/assets/2e02a9e3-5b4c-43bd-aed6-c42564cf6c37)
+
+
+
 
