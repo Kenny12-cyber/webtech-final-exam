@@ -179,4 +179,8 @@ All user credentials and sessions are securely managed using Spring Security, en
 🛠️ Admin Control Panel:
 Admin users have full control to manage the product catalog, oversee customer accounts, and handle order logistics to keep the platform updated and functional.
 
+![1](https://github.com/user-attachments/assets/9a2dc9e7-8eef-424c-b560-dc7d4c9813b9)
+![4](https://github.com/user-attachments/assets/1a8c1297-70c2-4ad9-90d2-6c5da57dc109)
+![3](https://github.com/user-attachments/assets/5f16965b-2c92-4b3c-abe1-1bb2fe2ce733)
+![2](https://github.com/user-attachments/assets/8306d51a-b22c-4a56-9b35-dd07d490d3c6)
 
