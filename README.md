@@ -83,3 +83,29 @@ DELETE /users/{id} – delete a user
 
 Data is exchanged in JSON format, making it lightweight and easy to use.
 
+
+
+
+🎨 Frontend Overview
+The frontend of Lux Fashion Online Shopping Application is built using Thymeleaf, a modern server-side Java template engine integrated with Spring Boot.
+
+Key Features:
+Thymeleaf Templates: Dynamically rendered HTML pages using Spring Boot data models.
+
+Responsive UI: Clean and user-friendly interface designed with HTML, CSS, and Bootstrap (if used).
+
+Form Handling: Integrated with Spring MVC to process login, registration, product creation, and order forms.
+
+Dynamic Content Rendering: Product listings, shopping cart contents, and user-specific data rendered directly on the server side.
+
+Pages Included:
+🏠 Home Page – Displays product listings with categories and search filters.
+
+🔐 Authentication Pages – Login, Register, and Role-based access (Admin/User).
+
+🛍️ Product Pages – View products, product details, and manage inventory (for admins).
+
+🛒 Cart & Orders – Add to cart, view cart, and place orders with confirmation.
+
+⚙️ Dashboard (Admin) – Manage users, products, and view order summaries.
+
