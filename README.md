@@ -200,6 +200,7 @@ Admin users have full control to manage the product catalog, oversee customer ac
 ![3](https://github.com/user-attachments/assets/9a0c41e8-8139-4383-a054-1afc129e99fb)
 ![sign](https://github.com/user-attachments/assets/293c6d73-7b0a-43bd-8c71-81148b67f89a)
 
+![em](https://github.com/user-attachments/assets/73a68eb3-d5cf-437b-a2fc-90dba6040eb9)
 
 
 
