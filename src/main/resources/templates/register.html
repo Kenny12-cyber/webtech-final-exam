@@ -8,69 +8,312 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<!--    <title>Sign Up</title>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background: linear-gradient(135deg, #5DADE2, #2E86C1);
-            font-family: 'Arial', sans-serif;
-            color: #ECF0F1;
-            animation: background-animation 10s infinite alternate;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
-        @keyframes background-animation {
-            0% { background: linear-gradient(135deg, #5DADE2, #2E86C1); }
-            100% { background: linear-gradient(135deg, #2E86C1, #5DADE2); }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.06)"/><circle cx="70" cy="80" r="2.5" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+            pointer-events: none;
+            z-index: -1;
         }
+
         .navbar {
-            background-color: rgba(0, 0, 50, 0.8);
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
         }
-        .container {
-            margin-top: 60px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        .form-container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
+
+        .navbar-brand img {
             border-radius: 8px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-        .form-container:hover {
-            transform: translateY(-5px);
+
+        .nav-link {
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem !important;
         }
-        .form-control:focus {
-            box-shadow: 0px 0px 10px rgba(0, 173, 239, 0.5);
-            border-color: #5DADE2;
+
+        .nav-link:hover {
+            color: #667eea !important;
+            transform: translateY(-2px);
         }
-        .btn-primary {
-            background-color: #5DADE2;
-            border-color: #3498DB;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #667eea;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
-        .btn-primary:hover {
-            background-color: #3498DB;
-            box-shadow: 0px 0px 10px rgba(0, 173, 239, 0.5);
+
+        .nav-link:hover::after {
+            width: 80%;
         }
-        .linkControl {
-            color: #5DADE2;
-            transition: color 0.3s ease;
+
+        .container {
+            margin-top: 3rem;
+            animation: slideUp 0.8s ease-out;
         }
-        .linkControl:hover {
-            color: #3498DB;
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        h3, p {
-            color: #ECF0F1;
+
+        .registration-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .registration-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin: -1px -1px 0 -1px;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .card-body {
+            padding: 2.5rem;
+        }
+
+        .input-group-modern {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #667eea;
+            font-size: 1.1rem;
+            z-index: 10;
+        }
+
+        .form-control-modern {
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .form-control-modern:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-register {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-register::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-register:hover::before {
+            left: 100%;
+        }
+
+        .btn-register:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .login-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .login-link:hover {
+            color: #764ba2;
+            text-decoration: none;
+        }
+
+        .login-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #764ba2;
+            transition: width 0.3s ease;
+        }
+
+        .login-link:hover::after {
+            width: 100%;
+        }
+
+        .help-text {
+            color: #6c757d;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+
+        .login-prompt {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9ecef;
+            color: #6c757d;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 1rem;
+                padding: 1rem;
+            }
+
+            .card-header {
+                padding: 2rem 1rem;
+            }
+
+            .card-body {
+                padding: 2rem 1.5rem;
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Floating particles animation */
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
         }
     </style>
 </head>
 <body>
+<!-- Floating particles -->
+<div class="floating-particles">
+    <div class="particle" style="left: 10%; top: 20%; width: 8px; height: 8px; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 20%; top: 80%; width: 12px; height: 12px; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 80%; top: 30%; width: 6px; height: 6px; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 70%; top: 70%; width: 10px; height: 10px; animation-delay: 1s;"></div>
+    <div class="particle" style="left: 90%; top: 10%; width: 8px; height: 8px; animation-delay: 3s;"></div>
+</div>
+
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -83,46 +326,96 @@
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/}" href="#">Home</a>
+                    <a class="nav-link" th:href="@{/}" href="#"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/shop}" href="#">Shop</a>
+                    <a class="nav-link" th:href="@{/shop}" href="#"><i class="fas fa-store"></i> Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/register}" href="#">Sign Up</a>
+                    <a class="nav-link" th:href="@{/register}" href="#"><i class="fas fa-user-plus"></i> Sign Up</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
 <div class="container">
-    <div class="col-sm-6 mx-auto form-container">
-        <h3>Sign Up Now</h3>
-        <p>Please fill out this form to register</p>
-        <form th:action="@{/register}" th:object="${user}" method="post">
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" name="firstName" id="firstName" required placeholder="Your Firstname" class="form-control form-control-lg">
+    <div class="col-sm-8 col-md-6 mx-auto">
+        <div class="registration-card">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <i class="fas fa-user-circle"></i> Create Account
+                </h2>
+                <p class="card-subtitle">Join our community today and start your journey</p>
             </div>
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" name="lastName" id="lastName" required placeholder="Your Lastname" class="form-control form-control-lg">
+            <div class="card-body">
+                <form th:action="@{/register}" th:object="${user}" method="post">
+                    <div class="input-group-modern">
+                        <label for="firstName" class="form-label">
+                            <i class="fas fa-signature"></i> Given Name
+                        </label>
+                        <div class="position-relative">
+                            <i class="fas fa-user input-icon"></i>
+                            <input type="text" name="firstName" id="firstName" required
+                                   placeholder="Enter your given name"
+                                   class="form-control form-control-modern">
+                        </div>
+                    </div>
+
+                    <div class="input-group-modern">
+                        <label for="lastName" class="form-label">
+                            <i class="fas fa-id-badge"></i> Family Name
+                        </label>
+                        <div class="position-relative">
+                            <i class="fas fa-user-tag input-icon"></i>
+                            <input type="text" name="lastName" id="lastName" required
+                                   placeholder="Enter your family name"
+                                   class="form-control form-control-modern">
+                        </div>
+                    </div>
+
+                    <div class="input-group-modern">
+                        <label for="email" class="form-label">
+                            <i class="fas fa-at"></i> Email Address
+                        </label>
+                        <div class="position-relative">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" class="form-control form-control-modern" required minlength="6"
+                                   placeholder="your.email@example.com" name="email" id="email"
+                                   aria-describedby="emailHelp">
+                        </div>
+                        <small id="emailHelp" class="help-text">
+                            <i class="fas fa-shield-alt"></i> Your email is secure and will never be shared
+                        </small>
+                    </div>
+
+                    <div class="input-group-modern">
+                        <label for="password" class="form-label">
+                            <i class="fas fa-key"></i> Secure Password
+                        </label>
+                        <div class="position-relative">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" class="form-control form-control-modern" required
+                                   placeholder="Create a strong password" name="password" id="password">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-register btn-block">
+                        <i class="fas fa-rocket"></i> Create My Account
+                    </button>
+
+                    <div class="login-prompt">
+                        <i class="fas fa-users"></i> Already part of our community?
+                        <a class="login-link" href="./login.html" th:href="@{/login}">
+                            <i class="fas fa-sign-in-alt"></i> Sign in here
+                        </a>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control form-control-lg" required minlength="6" placeholder="Email" name="email" id="email"
-                       aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control form-control-lg" required placeholder="Password" name="password" id="password">
-            </div>
-            <input type="submit" value="Register" class="btn btn-primary btn-block">
-            <span style="margin-top: 10px">Already have an account? <a class="linkControl" href="./login.html" th:href="@{/login}">Login here</a></span>
-        </form>
+        </div>
     </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
