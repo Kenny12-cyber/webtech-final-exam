@@ -161,4 +161,22 @@ Server Errors (500): Friendly message shown if an internal server error occurs.
 Cart/Order Errors: Prevents checkout if cart is empty or stock is unavailable, with real-time feedback.
 
 
+The lux Fashion is built to deliver a smooth and reliable online shopping experience, focusing on both customer satisfaction and administrative efficiency. The application serves as a complete e-commerce platform designed to meet key business goals.
+
+📌 Core Business Objectives:
+🛍️ Product Browsing:
+Users can easily browse all available products, search for specific items, and filter by categories to enhance discoverability.
+
+👤 User Account Management:
+Customers can register, log in, and manage their profile information, including personal details and order history.
+
+📦 Order Processing:
+After selecting products, users can place orders, view order details, and track order status.
+
+🔐 Security & Authentication:
+All user credentials and sessions are securely managed using Spring Security, ensuring safe and private access.
+
+🛠️ Admin Control Panel:
+Admin users have full control to manage the product catalog, oversee customer accounts, and handle order logistics to keep the platform updated and functional.
+
 
