@@ -146,5 +146,19 @@ Product Management: Add, update, or remove products in the store.
 
 Order Management: Monitor and manage customer orders effectively.
 
+✅ Implemented Scenarios:
+
+Invalid Login: Displays an error message when incorrect credentials are entered.
+
+Form Validation Errors: Notifies users if fields are missing or formatted incorrectly (e.g., invalid email, empty password).
+
+Resource Not Found (404): Custom error page for non-existent routes or product pages.
+
+Access Denied (403): Prevents unauthorized access and redirects users with a meaningful message.
+
+Server Errors (500): Friendly message shown if an internal server error occurs.
+
+Cart/Order Errors: Prevents checkout if cart is empty or stock is unavailable, with real-time feedback.
+
 
 
